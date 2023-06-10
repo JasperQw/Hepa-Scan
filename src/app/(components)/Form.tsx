@@ -47,11 +47,14 @@ export default function Form() {
   async function handleSubmit(e: any) {
     e.preventDefault();
     console.log(patientName);
-    const predictionRes = await fetch("http://127.0.0.1:5000/etcModel", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ data: Object.values(patientInfo) }),
-    });
+    const predictionRes = await fetch(
+      "https://hepa-scan-api.vercel.app/etcModel",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ data: Object.values(patientInfo) }),
+      }
+    );
 
     const predictionData = await predictionRes.json();
     const prediction = await Number(predictionData.prediction);
