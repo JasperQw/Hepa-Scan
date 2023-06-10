@@ -36,3 +36,4 @@ next-env.d.ts
 
 Hepa-Scan/node_modules/
 Hepa-Scan/.next/
+Hepa-Scan/machinelearningmodel/.venv
