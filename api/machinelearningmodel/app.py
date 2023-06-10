@@ -7,6 +7,9 @@ import pandas as pd
 app = Flask(__name__)
 CORS(app)
 
+@app.route('/', methods=['GET'])
+def home():
+    return "<h1>API is working..</h1>"
 
 @app.route('/etcModel', methods=['GET', 'POST'])
 def predict():
