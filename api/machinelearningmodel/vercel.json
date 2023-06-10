@@ -1,14 +1,3 @@
 {
-  "builds": [
-    {
-      "src": "machinelearningmodel/app.py",
-      "use": "@vercel/python"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "machinelearningmodel/app.py"
-    }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/api/app" }]
 }
